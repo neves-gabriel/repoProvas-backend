@@ -5,9 +5,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "node src/app.js",
-    "build": "tsc",
-    "postinstall": "npm run build",
+    "start": "ts-node src/app.ts",
     "dev": "nodemon src/app.js"
   },
   "keywords": [],
