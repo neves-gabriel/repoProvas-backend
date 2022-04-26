@@ -6,6 +6,8 @@
   "main": "index.ts",
   "scripts": {
     "start": "node src/app.js",
+    "build": "tsc",
+    "postinstall": "npm run build",
     "dev": "nodemon src/app.js"
   },
   "keywords": [],
