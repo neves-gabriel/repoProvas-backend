@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
+    "build": "prisma generate",
     "start": "ts-node src/app.ts",
     "dev": "nodemon src/app.js"
   },
