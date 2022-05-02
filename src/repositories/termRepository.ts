@@ -8,7 +8,11 @@ async function findAll() {
           teachersDisciplines: {
             include: {
               teacher: true,
-              tests: true,
+              tests: {
+                include: {
+                  category: true,
+                },
+              },
             },
           },
         },

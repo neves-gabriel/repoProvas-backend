@@ -1,4 +1,5 @@
 import { Router } from "express";
+import categoryRouter from "./categoryRouter.js";
 import teacherRouter from "./teacherRouter.js";
 import termRouter from "./termRouter.js";
 import userRouter from "./userRouter.js";
@@ -12,5 +13,6 @@ router.get("/health", async (req, res) => {
 router.use(userRouter);
 router.use(termRouter);
 router.use(teacherRouter);
+router.use(categoryRouter);
 
 export default router;
