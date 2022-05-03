@@ -3,6 +3,10 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import userRepository from "../repositories/userRepository.js";
 
+async function findAll() {
+  return userRepository.findAll();
+}
+
 async function findById(id: number) {
   const user = await userRepository.findById(id);
   if (!user) throw { type: "not_found" };
@@ -50,4 +54,5 @@ export default {
   findById,
   insert,
   login,
+  findAll,
 };

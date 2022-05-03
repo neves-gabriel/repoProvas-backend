@@ -17,6 +17,13 @@ async function findAll() {
   });
 }
 
+async function findById(id: any) {
+  return prisma.teacher.findUnique({
+    where: { id },
+  });
+}
+
 export default {
   findAll,
+  findById,
 };
