@@ -1,4 +1,5 @@
 import { prisma } from "../database.js";
+import { CreateTestData } from "../services/testService.js";
 
 async function findAll() {
   return prisma.test.findMany();
@@ -21,8 +22,15 @@ async function updateViewCount(id: any) {
   });
 }
 
+async function insert(createTestData: CreateTestData) {
+  await prisma.test.create({
+    data: createTestData,
+  });
+}
+
 export default {
   findAll,
   findById,
   updateViewCount,
+  insert,
 };
